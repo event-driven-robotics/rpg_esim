@@ -37,7 +37,7 @@ repositories:
     version: master
   rpg_dvs_ros:
     type: git
-    url: git@github.com:uzh-rpg/rpg_dvs_ros.git
+    url: git@github.com:event-driven-robotics/rpg_dvs_ros.git
     version: master
   assimp_catkin:
     type: git
