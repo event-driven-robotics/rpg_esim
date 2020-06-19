@@ -10,7 +10,7 @@ catkin_simple()
 set(INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include)
 set(LIB_DIR ${CMAKE_CURRENT_SOURCE_DIR}/libraries)
 
-configure_file(configuration/root_directory.h.in configuration/root_directory.h)
+configure_file(configuration/root_directory.h configuration/root_directory.h)
 include_directories(${CMAKE_BINARY_DIR}/configuration)
 
 # glad

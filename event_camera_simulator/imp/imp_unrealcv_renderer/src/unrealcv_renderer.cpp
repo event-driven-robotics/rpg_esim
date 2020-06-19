@@ -90,9 +90,9 @@ void UnrealCvRenderer::render(const Transformation& T_W_C, const ImagePtr& out_i
   const FloatType y_offset = static_cast<FloatType>(FLAGS_y_offset);
   const FloatType z_offset = static_cast<FloatType>(FLAGS_z_offset);
 
-  const FloatType x = 100. * (FLAGS_trajectory_multiplier_x * T_UE_UEC.getPosition()[0] + x_offset);
-  const FloatType y = 100. * (FLAGS_trajectory_multiplier_y * T_UE_UEC.getPosition()[1] + y_offset);
-  const FloatType z = 100. * (FLAGS_trajectory_multiplier_z * T_UE_UEC.getPosition()[2] + z_offset);
+  const FloatType x = (FLAGS_trajectory_multiplier_x * T_W_C.getPosition()[0] + x_offset);
+  const FloatType y = (FLAGS_trajectory_multiplier_y * T_W_C.getPosition()[1] + y_offset);
+  const FloatType z = (FLAGS_trajectory_multiplier_z * T_W_C.getPosition()[2] + z_offset);
 
   VLOG(1) << yaw << " " << pitch << " " << roll;
 
