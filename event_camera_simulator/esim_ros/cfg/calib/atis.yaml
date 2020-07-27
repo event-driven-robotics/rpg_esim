@@ -1,0 +1,28 @@
+label: "simulated_camera"
+id: 433585ebda8d1431223927a14788a127
+cameras:
+- camera:
+    label: atis
+    id: a0fba5412e961934d842d3a2a78e5cba
+    line-delay-nanoseconds: 0
+    image_height: 240
+    image_width: 304
+    type: pinhole
+    intrinsics:
+      cols: 1
+      rows: 4
+      data: [269.666, 269.219, 138.977, 122.166] # Fx, Fy, Cx, Cy
+    distortion:
+      type: radial-tangential
+      parameters:
+        cols: 1
+        rows: 4
+        data: [-0.228003, 0.160088, -0.00106322, -0.00113652] # K1, K2, P1, P2
+  T_B_C:
+    cols: 4
+    rows: 4
+    data: [1, 0, 0,  0,
+           0, -1, 0, 0,
+           0, 0, -1, 0,
+           0, 0, 0, 1]
+
