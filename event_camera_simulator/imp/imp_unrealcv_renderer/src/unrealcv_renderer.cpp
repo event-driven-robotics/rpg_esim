@@ -56,14 +56,14 @@ void UnrealCvRenderer::render(const Transformation& T_W_C, const ImagePtr& out_i
   const Transformation::TransformationMatrix mT_ZE_C = T_W_C.getTransformationMatrix();
   Transformation::TransformationMatrix mT_UE_ZE;
   mT_UE_ZE << 1, 0,  0, 0,
-              0, -1, 0, 0,
+              0, 1, 0, 0,
               0, 0,  1, 0,
               0, 0,  0, 1;
 
   Transformation::TransformationMatrix mT_C_UEC;
-  mT_C_UEC << 0, 1, 0,  0,
-              0, 0, -1, 0,
-              1, 0, 0,  0,
+  mT_C_UEC << 1, 0, 0,  0,
+              0, 1, 0, 0,
+              0, 0, 1,  0,
               0, 0, 0,  1;
 
   // rotate 90 deg to the right so that R_W_C = Identity <=> euler angle (0,0,0) in UnrealCV
